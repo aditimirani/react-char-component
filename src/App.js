@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import Classes from './App.css';
 import ValidationComponent from './components/ValidationComponent'
 import CharComponent from './components/CharComponent'
 class App extends Component {
@@ -29,8 +29,8 @@ class App extends Component {
     const {textLength,textValue} = this.state
     console.log('textValue', textValue)
     return (
-      <div className="App">
-          <h1 className="App-title">CharComponent</h1>
+      <div className={Classes.App}>
+          <h1 className={Classes.AppTitle}>CharComponent</h1>
           <input value={this.state.textValue} onChange={this.characterLength} />
           <p>length of character : <span>{textLength}</span></p>
           <ValidationComponent textLength={textLength} />
