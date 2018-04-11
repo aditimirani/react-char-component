@@ -1,6 +1,9 @@
 import React from 'react'
 
-const CharComponent = (props) => {
+
+const CharComponent = ({deleteChar,charVal}) => { //using distructing to pickup value from props
+    
+    //adding inline style
     const boxstyle= {
         display: 'inline-block',
         padding: '16px',
@@ -10,7 +13,7 @@ const CharComponent = (props) => {
     }
     return(
         <React.Fragment>
-            <div style={boxstyle} onClick={props.deleteChar}>{props.charVal}</div>
+            <div style={boxstyle} onClick={deleteChar}>{charVal}</div>
             </React.Fragment>
     )
 }

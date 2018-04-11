@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import ValidationComponent from './components/ValidationComponent'
 import CharComponent from './components/CharComponent'
@@ -33,8 +32,8 @@ class App extends Component {
       <div className="App">
           <h1 className="App-title">CharComponent</h1>
           <input value={this.state.textValue} onChange={this.characterLength} />
-          <p>length of character : <span>{this.state.textLength}</span></p>
-          <ValidationComponent textLength={this.state.textLength} />
+          <p>length of character : <span>{textLength}</span></p>
+          <ValidationComponent textLength={textLength} />
           {textValue.split('').map((value,index)=>{
             return <CharComponent charVal={value} deleteChar={()=>this.deleteChar(index)}/>
           })}
